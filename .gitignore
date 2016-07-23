@@ -12,3 +12,5 @@
 !/log/.keep
 /tmp
 /config/database.yml
+/config/unicorn.rb
+/config/unicorn_init.sh

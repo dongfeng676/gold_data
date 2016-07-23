@@ -47,3 +47,7 @@ end
 
 gem 'rest-client'
 gem 'safe_yaml', '~> 1.0', '>= 1.0.4'
+gem "unicorn"
+
+gem 'grape'
+gem 'grape-jbuilder'

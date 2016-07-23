@@ -1,0 +1,11 @@
+worker_processes 2
+
+working_directory "/home/zhang/project/alphaLog/moon"
+
+listen "/tmp/unicorn.moon.sock"
+timeout 30
+
+pid "/home/zhang/project/alphaLog/moon/tmp/unicorn.moon.pid"
+
+stderr_path "/home/zhang/project/alphaLog/moon/log/unicorn.log"
+stdout_path "/home/zhang/project/alphaLog/moon/log/unicorn.log"
