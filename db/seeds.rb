@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+golds = Gold.all
+golds.each do |gold|
+  AppLog.info(" date: #{gold.date} #{gold.time},price: #{gold.price}")
+end

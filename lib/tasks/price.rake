@@ -17,7 +17,10 @@ namespace :gold  do
     price_path = price_dir.to_s + "/" +  current_day
 
     price_data.each do |price|
-      Gold.create!(date:price[:date],time:price[:time],price:price[:adjClose]) if price[:adjClose].to_f >0
+        if price[:adjClose].to_f > 0
+            gold = Gold.create!(date:price[:date],time:price[:time],price:price[:adjClose])
+            AppLog.info(" date: #{gold.date} #{gold.time},price: #{gold.price}")
+        end
     end
     puts price_data.size
     end_time = Time.now
